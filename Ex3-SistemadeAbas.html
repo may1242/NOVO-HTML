@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <title>Meu Perfil</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body class="abas">
+<main class="perfil">
+ <h1>Meu Perfil</h1>
+ <nav class="abas">
+ <button onclick="mostrarAba('sobre')">Sobre</button>
+ <button onclick="mostrarAba('habilidades')">Habilidades</button>
+ <button onclick="mostrarAba('projetos')">Projetos</button>
+ </nav>
+ <section id="sobre">
+ <h2>Sobre</h2>
+ <p>Meu nome é Maria Luiza Ittner e sou estudante do SesiSenai, fazendo curso de Desenvolvimento de Sistemas</p>
+ </section>
+ <section id="habilidades">
+ <h2>Habilidades</h2>
+ <ul>
+ <li>Se irritar com a Iohanna</li>
+ <li>Tocar e cantar</li>
+ <li>Programar em JavaScript</li>
+ <li>Estudar com o namorado da Iohanna</li>
+ </ul>
+ </section>
+ <section id="projetos">
+ <h2>Projetos</h2>
+ <p>Projeto 1</p>
+ <p>Projeto 2</p>
+ </section>
+</main>
+<script>
+function mostrarAba(aba) {
+ const sobre = document.getElementById("sobre");
+ const habilidades = document.getElementById("habilidades");
+ const projetos = document.getElementById("projetos");
+ const elementoAtual = document.getElementById(aba);
+
+ // esconda as três seções
+ sobre.style.display = "none";
+ habilidades.style.display = "none";
+ projetos.style.display = "none";
+
+ // mostre somente a seção escolhida
+ if (aba === "sobre") {
+   sobre.style.display = "block";
+ } else if (aba === "habilidades") {
+   habilidades.style.display = "block";
+ } else if (aba === "projetos") {
+   projetos.style.display = "block";
+ }
+}
+</script>
+</body>
+</html>

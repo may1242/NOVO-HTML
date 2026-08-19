@@ -1,0 +1,107 @@
+.cartao {
+ /* largura, espaçamento, fundo,
+ borda, sombra e alinhamento */
+ align-content: center;
+ margin: auto;
+ width: 300px;
+ height: 300px;
+ border: 1px solid;
+ border-radius: 15px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+ background-color: lightgreen;
+}
+.avatar {
+ /* tamanho e formato da imagem */
+ width: 70px;
+ height: 70px;
+ border-radius: 50%;
+ object-fit: cover;
+ display: inline-block;
+ vertical-align: middle;
+ background-color: black;
+}
+.interesses {
+ /* estilo da lista */
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+button {
+ /* cores, borda, padding etc. */
+ background-color: #4CAF50;
+ color: rgb(200, 255, 168);
+ border: none;
+ padding: 10px 15px;
+ border-radius: 5px;
+ cursor: pointer;
+}
+button:hover {
+ /* o que muda ao passar o mouse? */
+ background-color: #2e7532;
+
+}
+button {
+ transition: background-color 0.3s ease;
+}
+
+
+.galeria {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 50px;
+}
+.card {
+ /* fundo, padding, borda,
+ sombra e tamanho */
+ background-color: rgb(193, 218, 255);
+ padding: 15px;
+ border: 1px solid #ddd;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ width: 100%;
+}
+.card img {
+ /* largura e altura da imagem */
+ width: 100%;
+ height: auto;
+}
+.card:hover {
+ /* efeito ao passar o mouse */
+    box-shadow: 0 8px 16px rgb(62, 96, 148);
+}
+@media (max-width: 700px) {
+ .galeria {
+ /* 1 card por linha */
+ grid-template-columns: 1fr;
+ gap: 50px;
+ }
+}
+button {
+ /* cores, borda, padding etc. */
+ background-color: #6793f1;
+ color: rgb(168, 188, 255);
+ border: none;
+ padding: 10px 15px;
+ border-radius: 5px;
+ cursor: pointer;
+}
+button:hover {
+ /* o que muda ao passar o mouse? */
+ background-color: #2e4775;
+
+}
+button {
+ transition: background-color 0.3s ease;
+}
+
+
+.abas {
+ display: flex;
+ gap: 10px;
+}
+.abas button {
+ /* estilize as abas */
+}
+section {
+ /* aparência do conteúdo */
+}
