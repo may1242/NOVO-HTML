@@ -59,6 +59,7 @@ button {
  border-radius: 10px;
  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
  width: 100%;
+ height: 100%;
 }
 .card img {
  /* largura e altura da imagem */
@@ -98,10 +99,61 @@ button {
 .abas {
  display: flex;
  gap: 10px;
-}
-.abas button {
- /* estilize as abas */
+ border: 1px solid;
+ border-radius: 15px;
+ background-color: rgb(193, 218, 255);
 }
 section {
- /* aparência do conteúdo */
+ display: none;
+}
+.visivel {
+ display: flex;
+ flex-direction: column;
+}
+.abas button {
+ background-color: #6793f1;
+ color: rgb(168, 188, 255);
+ border: none;
+ padding: 10px 15px;
+ border-radius: 5px;
+ cursor: pointer;
+}
+button:hover {
+ background-color: #2e4775;
+}
+button {
+ transition: background-color 0.3s ease;
+}
+section {
+ background-color: rgb(193, 218, 255);
+ padding: 15px;
+ border: 1px solid #ddd;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ width: 100%;
+}
+.avatar {
+ /* tamanho e formato da imagem */
+ width: 70px;
+ height: 70px;
+ border-radius: 50%;
+ object-fit: cover;
+ display: inline-block;
+ vertical-align: middle;
+ background-color: black;
+} 
+
+
+.sobre {
+ /* largura, fundo, padding etc. */
+ background-color: rgb(181, 128, 250);
+ width: 100%;
+ height: 100%;
+ padding: 15px;
+}
+#botao {
+ /* aparência do botão */
+}
+#botao:hover {
+ /* efeito */
 }

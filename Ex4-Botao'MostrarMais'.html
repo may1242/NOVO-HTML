@@ -1,0 +1,26 @@
+<section class="sobre">
+ <h1>Sobre mim</h1>
+ <p>
+ Sou Maria Luiza Ittner, tenho 17 anos e estudo na escola E.E.B. Frederico Hardt, em Indaial-SC. Sou estudante de SesiSenai de Indaial e faço curso de Desenvolvimento de Sistemas, 
+ </p>
+ <p id="extra" style="display: none;">
+ estando atualmente no final do primeiro período. Faço aniversário dia 14/08 a amo jogos e músicas.
+ </p>
+ <button id="botao" onclick="alternarTexto()">
+ Mostrar mais...
+ </button>
+</section>
+<script>
+function alternarTexto() {
+    const extra = document.getElementById("extra");
+    const botao = document.getElementById("botao");
+
+    if (extra.style.display === "none") {
+        extra.style.display = "block";
+        botao.innerText = "Mostrar menos";
+    } else {
+        extra.style.display = "none";
+        botao.innerText = "Mostrar mais";
+    }
+}
+</script>
