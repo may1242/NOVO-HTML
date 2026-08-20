@@ -146,14 +146,67 @@ section {
 
 .sobre {
  /* largura, fundo, padding etc. */
- background-color: rgb(181, 128, 250);
- width: 100%;
- height: 100%;
+ background-color: rgb(232, 193, 255);
  padding: 15px;
+ border: 1px solid #ddd;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ width: 100%;
 }
 #botao {
  /* aparência do botão */
+ background-color: #ae67f1;
+ color: rgb(168, 188, 255);
+ border: none;
+ padding: 10px 15px;
+ border-radius: 5px;
+ cursor: pointer;
 }
 #botao:hover {
- /* efeito */
+ background-color: #592e75;
+}
+button {
+ transition: background-color 0.3s ease;
+}
+
+
+.modoescuro body {
+ background-color: white;
+ color: #222;
+}
+.card {
+ background-color: #f2f2f2;
+}
+/* Complete o tema escuro */
+body.dark {
+ /* fundo e cor dos textos */
+}
+body.dark .card {
+ /* aparência do card no tema escuro */
+}
+
+
+
+.apresentacao {
+ /* organização e aparência */
+}
+.abas {
+ /* layout dos botões */
+}
+.galeria {
+ /* 3 cards em telas grandes */
+}
+.card {
+ /* aparência dos cards */
+}
+footer {
+ /* aparência do rodapé */
+}
+@media (max-width: 700px) {
+ .galeria {
+ /* 1 card por linha */
+ }
+}
+body.dark {
+ /* tema escuro */
 }
