@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
- <meta charset="UTF-8">
- <title>Modo Escuro</title>
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="1style.css">
 </head>
 <body>
-<header>
- <h1>Minha página</h1>
- <button onclick="alternarTema()">Modo escuro</button>
-</header>
-<main>
- <section class="card">
- <h2>Meu conteúdo</h2>
- <p>Texto da página.</p>
- </section>
-</main>
-<script>
-function alternarTema() {
- document.body.classList.toggle("dark");
-}
-</script>
+    <main>
+        <section class="card">
+            <div class="toggle-container">
+                <span class="toggle-label">Alterar tema</span>
+                <button id="btn-toggle" onclick="alternarTema()">
+                    <div class="bolinha"></div>
+                </button>
+            </div>
+            
+            <h2>Configurações de tema:</h2>
+            <p id="texto-tema">Modo claro</p>
+        </section>
+    </main>
+
+    <script>
+        function alternarTema() {
+            document.body.classList.toggle("dark");
+            
+            const texto = document.getElementById("texto-tema");
+            const isDark = document.body.classList.contains("dark");
+
+            if (isDark) {
+                texto.innerText = "Modo escuro";
+            } else {
+                texto.innerText = "Modo claro";
+            }
+        }
+    </script>
 </body>
+</html>

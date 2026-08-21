@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
- <meta charset="UTF-8">
- <title>Botão "Mostar Mais"</title>
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Guerra do Paraguai</title>
+    <link rel="stylesheet" href="3style.css">
 </head>
-<body class="sobre">
-<section class="sobre">
- <h1>Sobre mim</h1>
- <p>
- Sou Maria Luiza Ittner, tenho 17 anos e estudo na escola E.E.B. Frederico Hardt, em Indaial-SC. Sou estudante de SesiSenai de Indaial e faço curso de Desenvolvimento de Sistemas, 
- </p>
- <p id="extra" style="display: none;">
- estando atualmente no final do primeiro período. Faço aniversário dia 14/08 e amo jogos e músicas.
- </p>
- <button id="botao" onclick="alternarTexto()">
- Mostrar mais...
- </button>
-</section>
-<script>
-function alternarTexto() {
-    const extra = document.getElementById("extra");
-    const botao = document.getElementById("botao");
+<body style="background: linear-gradient(135deg, #cbd5e1, #64748b); min-height: 100vh;">
 
-    if (extra.style.display === "none") {
-        extra.style.display = "block";
-        botao.innerText = "Mostrar menos";
-    } else {
-        extra.style.display = "none";
-        botao.innerText = "Mostrar mais";
-    }
-}
-</script>
+    <section class="sobre">
+        <h2>A GUERRA DO PARAGUAI</h2>
+        <p>A Guerra do Paraguai (1864–1870) foi o maior conflito armado da América Latina. Ela opôs o Paraguai, governado por Francisco Solano López, à Tríplice Aliança, formada por Brasil, Argentina e Uruguai. O confronto terminou com a derrota paraguaia, devastação demográfica e grandes perdas territoriais para o Paraguai. O principal motivo da Guerra do Paraguai foi a <span id="extra" style="display: none;">disputa pelo controle político e econômico da Bacia do Prata, agravada pela intervenção militar do Brasil no Uruguai em 1864. O ditador paraguaio Francisco Solano López reagiu à ação brasileira considerando-a uma ameaça ao equilíbrio regional, o que deu início ao conflito.</span></p>
+        
+        <button id="botao" onclick="alternarTexto()">Mostrar mais...</button>
+    </section>
+
+    <script>
+        function alternarTexto() {
+            const extra = document.getElementById("extra");
+            const botao = document.getElementById("botao");
+
+            if (extra.style.display === "none" || extra.style.display === "") {
+                extra.style.display = "inline";
+                botao.innerText = "Mostrar menos...";
+            } else {
+                extra.style.display = "none";
+                botao.innerText = "Mostrar mais...";
+            }
+        }
+    </script>
 </body>
 </html>

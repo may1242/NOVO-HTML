@@ -1,53 +1,142 @@
-<header>
- <h1>Meu Portfólio</h1>
- <button onclick="alternarTema()">Modo escuro</button>
-</header>
-<main>
- <section class="apresentacao">
- <img src="avatar.jpg" alt="Avatar">
- <h2>Seu nome</h2>
- <p>Uma breve apresentação.</p>
- </section>
- <nav class="abas">
- <button onclick="mostrarAba('sobre')">Sobre</button>
- <button onclick="mostrarAba('habilidades')">Habilidades</button>
- <button onclick="mostrarAba('projetos')">Projetos</button>
- </nav>
- <section id="sobre">
- <h2>Sobre</h2>
- <p>Seu texto...</p>
- <p id="extra" style="display:none;">
- Texto adicional...
- </p>
- <button id="botao" onclick="alternarTexto()">Mostrar mais</button>
- </section>
- <section id="habilidades">
- <h2>Habilidades</h2>
- <ul>
- <li>Habilidade 1</li>
- <li>Habilidade 2</li>
- <li>Habilidade 3</li>
- <li>Habilidade 4</li>
- </ul>
- </section>
- <section id="projetos">
- <h2>Projetos</h2>
- <div class="galeria">
- <!-- crie 3 cards -->
- </div>
- </section>
-</main>
-<footer>
- Seu nome — 2026
-</footer>
-<script>
-function alternarTema() {
- // complete
-}
-function mostrarAba(aba) {
- // complete
-}
-function alternarTexto() {
- // complete
-}
-</script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Portfólio - Maria Luiza</title>
+    <link rel="stylesheet" href="2style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Maria Luiza Ittner</div>
+        
+        <nav class="abas">
+            <button class="aba-btn ativo" onclick="mostrarAba('sobre', this)">Sobre</button>
+            <button class="aba-btn" onclick="mostrarAba('habilidades', this)">Habilidades</button>
+            <button class="aba-btn" onclick="mostrarAba('projetos', this)">Projetos</button>
+        </nav>
+
+        <div class="toggle-container">
+            <span id="texto-tema">Modo claro</span>
+            <button id="btn-toggle" onclick="alternarTema()">
+                <div class="bolinha"></div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="aba-conteudo" style="display: block;">
+            <div class="apresentacao">
+                <img class="avatar" src="Imagens/IMG_20250816_183151_808.webp" alt="Foto de Maria Luiza Ittner">
+                <div class="info">
+                    <h2>Olá, eu sou Maria Luiza Ittner</h2>
+                    <h3>Desenvolvedora de Sistemas</h3>
+                    <p class="texto-sobre">
+                        Estou aprendendo programação, faço alguns projetos de Java, Html, CSS e<span id="pontinhos">...</span><span id="extra" style="display: none;"> gosto de fazer sites e códigos bem organizados, bonitos e funcionais.</span>
+                    </p>
+                    <button id="botao-saiba-mais" onclick="alternarTexto()">Ler mais</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="aba-conteudo" style="display: none;">
+            <h2>Minhas Habilidades</h2>
+            <ul class="lista-habilidades">
+                <li>Lógica de Programação</li>
+                <li>HTML & CSS</li>
+                <li>Java</li>
+            </ul>
+        </section>
+
+        <section id="projetos" class="aba-conteudo" style="display: none;">
+            <h2>Projetos em destaque</h2>
+            <div class="galeria">
+                <div class="card">
+                    <img src="Imagens/Screenshot_20260820-171755_Mimo~2.jpg" alt="Projeto 1">
+                    <div class="card-info">
+                        <h4>Botão "Ler Mais..."</h4>
+                        <p>Projeto de interatividade com JavaScript.</p>
+                        <button class="btn-projeto">Ver projeto</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="Imagens/Screenshot_20260820-172037_Mimo~2.jpg" alt="Projeto 2">
+                    <div class="card-info">
+                        <h4>Abas</h4>
+                        <p>Organização de conteúdo dinâmico na tela.</p>
+                        <button class="btn-projeto">Ver projeto</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="Imagens/Captura de tela 2026-08-20 192633.png" alt="Projeto 3">
+                    <div class="card-info">
+                        <h4>Tema Claro/Escuro</h4>
+                        <p>Configuração de acessibilidade e design.</p>
+                        <button class="btn-projeto">Ver projeto</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Maria Luiza Ittner. Todos os direitos reservados.</p>
+        <div class="redes-sociais">
+            <a href="https://github.com/may1242" target="_blank" title="Meu GitHub" style="text-decoration: none;">
+                <strong>GITHUB</strong>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Função das Abas
+        function mostrarAba(idAba, botaoClicado) {
+            const abas = document.querySelectorAll('.aba-conteudo');
+            abas.forEach(aba => {
+                aba.style.display = 'none';
+            });
+
+            document.getElementById(idAba).style.display = 'block';
+
+            const botoes = document.querySelectorAll('.aba-btn');
+            botoes.forEach(botao => {
+                botao.classList.remove('ativo');
+            });
+            botaoClicado.classList.add('ativo');
+        }
+
+        // Função do Tema Claro/Escuro
+        function alternarTema() {
+            document.body.classList.toggle('dark');
+            
+            const texto = document.getElementById("texto-tema");
+            const isDark = document.body.classList.contains("dark");
+
+            if (isDark) {
+                texto.innerText = "Modo escuro";
+            } else {
+                texto.innerText = "Modo claro";
+            }
+        }
+
+        // Função do Botão Ler Mais 
+        function alternarTexto() {
+            const pontinhos = document.getElementById("pontinhos");
+            const extra = document.getElementById("extra");
+            const botao = document.getElementById("botao-saiba-mais");
+
+            if (extra.style.display === "none" || extra.style.display === "") {
+                extra.style.display = "inline";
+                pontinhos.style.display = "none"; 
+                botao.innerText = "Ler menos";
+            } else {
+                extra.style.display = "none";
+                pontinhos.style.display = "inline";
+                botao.innerText = "Ler mais";
+            }
+        }
+    </script>
+</body>
+</html>

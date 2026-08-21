@@ -1,0 +1,41 @@
+.sobre {
+    background-color: #ffffff;
+    padding: 35px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sobre h2 {
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+.sobre p {
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+#botao {
+    background-color: transparent;
+    color: #334155;
+    border: 2px solid #334155;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    max-width: 250px;
+}
+#botao:hover {
+    background-color: #334155;
+    color: #ffffff;
+}
+button {
+    transition: all 0.3s ease;
+}
